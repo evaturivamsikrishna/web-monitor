@@ -23,14 +23,20 @@ HISTORY_DIR = DATA_DIR / "history"
 HISTORY_DIR.mkdir(parents=True, exist_ok=True)
 
 async def fetch_page(session, url):
-    """Fetch webpage"""
+    """Fetch webpage with proper headers"""
     try:
-        async with session.get(url, timeout=10) as resp:
+        async with session.get(url, timeout=10, allow_redirects=True) as resp:
             if resp.status == 200:
                 return await resp.text()
-    except:
-        pass
-    return None
+            else:
+                print(f"⚠️  Fetch returned status {resp.status}")
+                return None
+    except asyncio.TimeoutError:
+        print("⚠️  Fetch timeout")
+        return None
+    except Exception as e:
+        print(f"⚠️  Fetch error: {e}")
+        return None
 
 async def extract_links(session, page_html):
     """Extract all links from HTML"""
@@ -56,12 +62,17 @@ async def check_url(session, url):
     except asyncio.TimeoutError:
         return {"url": url, "status": "TIMEOUT", "code": None}
     except Exception as e:
-        return {"url": url, "status": "ERROR", "code": None}
-
-async def main():
-    """Main checker logic"""
-    print(f"🔗 Checking links for: {BASE_URL}")
+    # Headers to avoid being blocked by websites
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
     
+    async with aiohttp.ClientSession(headers=headers) as session:
+        print("📥 Fetching homepage...")
+        page_html = await fetch_page(session, BASE_URL)
+        
+        if not page_html:
+            print("❌ Failed to fetch homepage - check if BASE_URL is correct and accessibl
     async with aiohttp.ClientSession() as session:
         print("📥 Fetching homepage...")
         page_html = await fetch_page(session, BASE_URL)
