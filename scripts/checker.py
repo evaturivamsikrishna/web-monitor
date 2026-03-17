@@ -22,6 +22,7 @@ HISTORY_DIR = DATA_DIR / "history"
 # Create directories
 HISTORY_DIR.mkdir(parents=True, exist_ok=True)
 
+
 async def fetch_page(session, url):
     """Fetch webpage with proper headers"""
     try:
@@ -38,6 +39,7 @@ async def fetch_page(session, url):
         print(f"⚠️  Fetch error: {e}")
         return None
 
+
 async def extract_links(session, page_html):
     """Extract all links from HTML"""
     soup = BeautifulSoup(page_html, 'html.parser')
@@ -49,6 +51,7 @@ async def extract_links(session, page_html):
             links.add(href)
     
     return list(links)
+
 
 async def check_url(session, url):
     """Check if URL is valid"""
@@ -62,6 +65,13 @@ async def check_url(session, url):
     except asyncio.TimeoutError:
         return {"url": url, "status": "TIMEOUT", "code": None}
     except Exception as e:
+        return {"url": url, "status": "ERROR", "code": None}
+
+
+async def main():
+    """Main checker logic"""
+    print(f"🔗 Checking links for: {BASE_URL}")
+    
     # Headers to avoid being blocked by websites
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
@@ -72,13 +82,7 @@ async def check_url(session, url):
         page_html = await fetch_page(session, BASE_URL)
         
         if not page_html:
-            print("❌ Failed to fetch homepage - check if BASE_URL is correct and accessibl
-    async with aiohttp.ClientSession() as session:
-        print("📥 Fetching homepage...")
-        page_html = await fetch_page(session, BASE_URL)
-        
-        if not page_html:
-            print("❌ Failed to fetch homepage")
+            print("❌ Failed to fetch homepage - check if BASE_URL is correct and accessible")
             return
         
         print("🔍 Extracting links...")
@@ -131,6 +135,7 @@ async def check_url(session, url):
     print(f"🔴 Broken: {len(broken)}")
     print(f"📊 Success Rate: {success_rate:.1f}%")
     print("="*50)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
