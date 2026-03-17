@@ -1,12 +1,12 @@
 {
-  "last_check": "2026-03-17T18:36:32.419660",
+  "last_check": "2026-03-17T19:11:10.586804",
   "total_urls": 3,
   "broken_count": 0,
   "timeout_count": 0,
   "success_rate": 100.0,
   "results": [
     {
-      "url": "https://github.com/requests/httpbin",
+      "url": "https://github.com/rochacbruno/flasgger",
       "status": "OK",
       "code": 200
     },
@@ -16,7 +16,7 @@
       "code": 200
     },
     {
-      "url": "https://github.com/rochacbruno/flasgger",
+      "url": "https://github.com/requests/httpbin",
       "status": "OK",
       "code": 200
     }
