@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.1
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       
@@ -26,7 +26,13 @@ jobs:
       - name: Run link checker
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
-        run: python scripts/checker.py
+        run: |
+          if [ -z "$BASE_URL" ]; then
+            echo "❌ ERROR: BASE_URL secret is not set!"
+            echo "Please add BASE_URL to GitHub Secrets: Settings → Secrets and variables → Actions"
+            exit 1
+          fi
+          python scripts/checker.py
       
       - name: Commit results
         run: |
