@@ -6,8 +6,14 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from pathlib import Path
 
-# Config
+# Config - Get BASE_URL from environment or use default
+# Priority: GitHub Actions → Environment vars → Fallback
 BASE_URL = os.getenv("BASE_URL", "https://example.com")
+
+# Validate BASE_URL
+if BASE_URL == "https://example.com":
+    print("⚠️  WARNING: Using default BASE_URL. Set BASE_URL environment variable or update .env")
+
 DATA_DIR = Path("data")
 RESULTS_FILE = DATA_DIR / "results.json"
 BROKEN_FILE = DATA_DIR / "broken_urls.json"

@@ -22,14 +22,21 @@ pip install -r requirements.txt
 
 ### 2. Add Secrets
 
-Create `.env` file:
+**For GitHub Actions (Required):**
+Go to **Settings → Secrets and variables → Actions** and add:
+- `BASE_URL` = `https://your-website.com`
+
+**For Local Development (Optional):**
 ```bash
-cp .env.example .env
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+# Edit .streamlit/secrets.toml with your BASE_URL
 ```
 
-Or add GitHub Secrets:
-- `BASE_URL` - Website to monitor
-- `STREAMLIT_URL` - Dashboard URL
+Or create `.env` file:
+```bash
+cp .env.example .env
+# Edit .env with your BASE_URL
+```
 
 ### 3. Deploy Dashboard
 
@@ -62,6 +69,7 @@ View at: `https://share.streamlit.io/[username]/web-monitor`
 ## Files
 
 - `.github/workflows/` - GitHub Actions automation
+- `.streamlit/` - Streamlit configuration & secrets example
 - `scripts/checker.py` - Link checking logic
 - `streamlit_app.py` - Dashboard
 - `data/` - Results storage
