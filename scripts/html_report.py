@@ -272,7 +272,7 @@ def create_full_html_report(results_data=None):
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #f3f4f6;
-            padding: 20px;
+            padding: 12px;
         }}
 
         .page-break {{
@@ -281,68 +281,68 @@ def create_full_html_report(results_data=None):
 
         .site-report {{
             background: white;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             overflow: hidden;
         }}
 
         .header {{
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 30px 40px;
+            padding: 16px 24px;
             color: white;
         }}
 
         .header h1 {{
-            font-size: 28px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 2px;
             font-weight: 700;
         }}
 
         .header .subtitle {{
-            font-size: 14px;
+            font-size: 12px;
             opacity: 0.9;
         }}
 
         .status-bar {{
-            padding: 25px 40px;
+            padding: 14px 24px;
             background: #f9fafb;
-            border-bottom: 4px solid;
+            border-bottom: 3px solid;
         }}
 
         .status-content {{
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }}
 
         .status-icon {{
-            font-size: 40px;
+            font-size: 32px;
         }}
 
         .status-text h2 {{
-            font-size: 20px;
+            font-size: 16px;
             color: #111827;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }}
 
         .status-text p {{
             color: #6b7280;
-            font-size: 14px;
+            font-size: 12px;
         }}
 
         .metrics {{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            padding: 30px 40px;
+            gap: 8px;
+            padding: 16px 24px;
         }}
 
         .metric-card {{
             text-align: center;
-            padding: 25px 15px;
-            border-radius: 10px;
-            border: 2px solid #e5e7eb;
+            padding: 12px 8px;
+            border-radius: 8px;
+            border: 1.5px solid #e5e7eb;
         }}
 
         .metric-card.error {{
@@ -356,20 +356,21 @@ def create_full_html_report(results_data=None):
         }}
 
         .metric-icon {{
-            font-size: 28px;
-            margin-bottom: 8px;
+            font-size: 20px;
+            margin-bottom: 4px;
         }}
 
         .metric-label {{
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             color: #6b7280;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
         }}
 
         .metric-value {{
-            font-size: 32px;
+            font-size: 22px;
             font-weight: 700;
             color: #111827;
         }}
@@ -385,47 +386,47 @@ def create_full_html_report(results_data=None):
         .performance-grid {{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            padding: 0 40px 30px 40px;
+            gap: 8px;
+            padding: 0 24px 12px 24px;
         }}
 
         .perf-card {{
             background: #f0f9ff;
             border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 6px;
+            padding: 10px;
             text-align: center;
         }}
 
         .perf-label {{
-            font-size: 12px;
+            font-size: 10px;
             color: #0c4a6e;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }}
 
         .perf-value {{
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 700;
             color: #075985;
         }}
 
         .issues-section {{
-            padding: 0 40px 30px 40px;
+            padding: 0 24px 12px 24px;
         }}
 
         .issues-box {{
             background: #fef2f2;
-            border-left: 4px solid #dc2626;
-            border-radius: 8px;
-            padding: 18px;
+            border-left: 3px solid #dc2626;
+            border-radius: 6px;
+            padding: 12px;
         }}
 
         .issues-title {{
-            font-size: 15px;
+            font-size: 13px;
             font-weight: 600;
             color: #991b1b;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }}
 
         .issues-list {{
@@ -434,9 +435,9 @@ def create_full_html_report(results_data=None):
 
         .issues-list li {{
             color: #7f1d1d;
-            font-size: 13px;
-            padding: 5px 0;
-            padding-left: 20px;
+            font-size: 12px;
+            padding: 3px 0;
+            padding-left: 18px;
             position: relative;
         }}
 
@@ -450,21 +451,21 @@ def create_full_html_report(results_data=None):
 
         .issues-list code {{
             background: #fff5f5;
-            padding: 2px 6px;
-            border-radius: 4px;
+            padding: 1px 4px;
+            border-radius: 3px;
             font-family: 'Monaco', monospace;
-            font-size: 12px;
+            font-size: 11px;
             color: #7f1d1d;
         }}
 
         .run-details {{
-            padding: 0 40px 30px 40px;
+            padding: 0 24px 12px 24px;
         }}
 
         .details-table {{
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
+            font-size: 12px;
         }}
 
         .details-table tr {{
@@ -472,7 +473,7 @@ def create_full_html_report(results_data=None):
         }}
 
         .details-table td {{
-            padding: 12px 0;
+            padding: 8px 0;
         }}
 
         .details-table td:first-child {{
@@ -487,10 +488,10 @@ def create_full_html_report(results_data=None):
 
         .footer {{
             text-align: center;
-            padding: 25px;
+            padding: 16px;
             color: #6b7280;
-            font-size: 12px;
-            margin-top: 40px;
+            font-size: 11px;
+            margin-top: 20px;
         }}
 
         @media print {{
@@ -500,49 +501,49 @@ def create_full_html_report(results_data=None):
             }}
 
             .site-report {{
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 page-break-inside: avoid;
             }}
         }}
     </style>
 </head>
 <body>
-    <div style="background: white; border-radius: 12px; padding: 40px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h1 style="font-size: 32px; color: #111827; margin-bottom: 8px;">🔗 WebMonitor Report</h1>
-            <p style="color: #6b7280; font-size: 14px;">{timestamp}</p>
+    <div style="background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+        <div style="text-align: center; margin-bottom: 12px;">
+            <h1 style="font-size: 24px; color: #111827; margin-bottom: 4px;">🔗 WebMonitor Report</h1>
+            <p style="color: #6b7280; font-size: 12px;">{timestamp}</p>
         </div>
 
-        <div style="background: #f9fafb; border-left: 4px solid {overall_color}; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <div style="font-size: 32px;">{overall_icon}</div>
+        <div style="background: #f9fafb; border-left: 3px solid {overall_color}; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="font-size: 28px;">{overall_icon}</div>
                 <div>
-                    <div style="font-size: 18px; font-weight: 700; color: #111827; margin-bottom: 4px;">{overall_status}</div>
-                    <div style="color: #6b7280; font-size: 13px;">{sites_count} site(s) monitored • {total_all:,} URLs checked</div>
+                    <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 2px;">{overall_status}</div>
+                    <div style="color: #6b7280; font-size: 12px;">{sites_count} site(s) monitored • {total_all:,} URLs checked</div>
                 </div>
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
-            <div style="background: #f0f9ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
-                <div style="font-size: 11px; color: #0c4a6e; font-weight: 600; margin-bottom: 8px;">TOTAL URLS</div>
-                <div style="font-size: 28px; font-weight: 700; color: #075985;">{total_all:,}</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+            <div style="background: #f0f9ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 12px; text-align: center;">
+                <div style="font-size: 18px; margin-bottom: 4px;">📊</div>
+                <div style="font-size: 10px; color: #0c4a6e; font-weight: 600; margin-bottom: 4px;">TOTAL URLS</div>
+                <div style="font-size: 20px; font-weight: 700; color: #075985;">{total_all:,}</div>
             </div>
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">❌</div>
-                <div style="font-size: 11px; color: #7f1d1d; font-weight: 600; margin-bottom: 8px;">BROKEN</div>
-                <div style="font-size: 28px; font-weight: 700; color: #dc2626;">{broken_all}</div>
+            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 12px; text-align: center;">
+                <div style="font-size: 18px; margin-bottom: 4px;">❌</div>
+                <div style="font-size: 10px; color: #7f1d1d; font-weight: 600; margin-bottom: 4px;">BROKEN</div>
+                <div style="font-size: 20px; font-weight: 700; color: #dc2626;">{broken_all}</div>
             </div>
-            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">✅</div>
-                <div style="font-size: 11px; color: #166534; font-weight: 600; margin-bottom: 8px;">SUCCESS RATE</div>
-                <div style="font-size: 28px; font-weight: 700; color: #16a34a;">{avg_success:.1f}%</div>
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 12px; text-align: center;">
+                <div style="font-size: 18px; margin-bottom: 4px;">✅</div>
+                <div style="font-size: 10px; color: #166534; font-weight: 600; margin-bottom: 4px;">SUCCESS RATE</div>
+                <div style="font-size: 20px; font-weight: 700; color: #16a34a;">{avg_success:.1f}%</div>
             </div>
-            <div style="background: #fef3c7; border: 1px solid #fde047; border-radius: 8px; padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
-                <div style="font-size: 11px; color: #713f12; font-weight: 600; margin-bottom: 8px;">SITES</div>
-                <div style="font-size: 28px; font-weight: 700; color: #9a3412;">{sites_count}</div>
+            <div style="background: #fef3c7; border: 1px solid #fde047; border-radius: 6px; padding: 12px; text-align: center;">
+                <div style="font-size: 18px; margin-bottom: 4px;">🌐</div>
+                <div style="font-size: 10px; color: #713f12; font-weight: 600; margin-bottom: 4px;">SITES</div>
+                <div style="font-size: 20px; font-weight: 700; color: #9a3412;">{sites_count}</div>
             </div>
         </div>
     </div>
