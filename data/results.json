@@ -1,25 +1,29 @@
 {
-  "last_check": "2026-03-17T19:11:10.586804",
-  "total_urls": 3,
-  "broken_count": 0,
-  "timeout_count": 0,
-  "success_rate": 100.0,
-  "results": [
+  "timestamp": "2026-03-18T00:48:02.357919",
+  "sites": [
     {
-      "url": "https://github.com/rochacbruno/flasgger",
-      "status": "OK",
-      "code": 200
-    },
-    {
-      "url": "https://kennethreitz.org",
-      "status": "OK",
-      "code": 200
-    },
-    {
-      "url": "https://github.com/requests/httpbin",
-      "status": "OK",
-      "code": 200
+      "site_id": "primary",
+      "site_name": "Primary Site",
+      "base_url": "https://example.com",
+      "last_check": "2026-03-18T00:48:02.356629",
+      "total_urls": 1,
+      "broken_count": 0,
+      "timeout_count": 0,
+      "error_count": 0,
+      "success_rate": 100.0,
+      "avg_response_time_ms": 1884.38,
+      "p50_response_time_ms": 1884.38,
+      "p95_response_time_ms": 1884.38,
+      "p99_response_time_ms": 1884.38,
+      "results": [
+        {
+          "url": "https://iana.org/domains/example",
+          "status": "OK",
+          "code": 200,
+          "response_time_ms": 1884.38,
+          "error_type": null
+        }
+      ]
     }
-  ],
-  "base_url": "https://httpbin.org/"
+  ]
 }

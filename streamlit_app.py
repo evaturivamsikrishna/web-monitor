@@ -10,6 +10,10 @@ import os
 
 # Add scripts to path for imports
 sys.path.insert(0, str(Path(__file__).parent / "scripts"))
+try:
+    from html_report import create_full_html_report, save_html_report
+except ImportError:
+    pass
 
 # Configure page FIRST
 st.set_page_config(
@@ -532,13 +536,14 @@ else:
         st.divider()
         
         # Tabs - Enhanced with new sections
-        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
             "📊 Overview", 
             "🔗 Broken Links", 
             "📈 Trends", 
             "⚡ Performance", 
             "🤖 AI Insights",
-            "ℹ️ Details"
+            "ℹ️ Details",
+            "📄 Report"
         ])
     
         with tab1:
@@ -838,6 +843,69 @@ else:
             with col2:
                 st.code(f"""Retry Count: {selected_site.get('retry_count', 3)}
 Timeout: {selected_site.get('timeout', 10)}s""", language="text")
+        
+        with tab7:
+            st.subheader("📄 Professional HTML Report")
+            
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.write("Generate a professional HTML report that can be shared, printed, or emailed to stakeholders.")
+            with col2:
+                if st.button("🔄 Generate Report", key="gen_report"):
+                    with st.spinner("Generating report..."):
+                        html_content = create_full_html_report(results_data)
+                        if html_content:
+                            st.success("✅ Report generated!")
+                            
+                            # Download button
+                            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                            filename = f"webmonitor_report_{timestamp}.html"
+                            st.download_button(
+                                label="📥 Download HTML Report",
+                                data=html_content,
+                                file_name=filename,
+                                mime="text/html",
+                                key="download_report"
+                            )
+                        else:
+                            st.error("❌ Failed to generate report")
+            
+            st.divider()
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("### 📋 Report Features")
+                features = [
+                    "✅ Multi-site summary with health scores",
+                    "📊 Performance metrics and percentiles",
+                    "🔗 Broken links and error breakdown",
+                    "📈 Success rates and trends",
+                    "🎨 Professional styling for stakeholders",
+                    "🖨️ Print-friendly formatting",
+                    "📧 Email-ready HTML",
+                    "⏰ Timestamped reports"
+                ]
+                for feature in features:
+                    st.write(feature)
+            
+            with col2:
+                st.markdown("### 🎯 Use Cases")
+                use_cases = [
+                    "**Executive Dashboards**: Share with leadership team",
+                    "**Email Reports**: Automated daily/weekly summaries",
+                    "**Print Reports**: Archive for compliance",
+                    "**Stakeholder Updates**: Professional communication",
+                    "**Incident Reports**: Document issues and resolutions",
+                    "**Trend Analysis**: Historical report comparison",
+                    "**API Documentation**: Link health status",
+                    "**SLA Verification**: Compliance documentation"
+                ]
+                for use_case in use_cases:
+                    st.write(use_case)
+            
+            st.divider()
+            st.markdown("### 🚀 Automation")
+            st.info("💡 **Pro Tip**: Set up GitHub Actions to automatically generate and email HTML reports on a scheduled basis. Check DEPLOYMENT.md for details on configuring email alerts.")
 
 st.divider()
 

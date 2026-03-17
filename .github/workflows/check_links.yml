@@ -51,10 +51,13 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/ai_insights.py
       
+      - name: Generate HTML report
+        run: python scripts/html_report.py
+      
       - name: Commit results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update link check results"
+          git add data/ reports/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update link check results and reports"
           git push
