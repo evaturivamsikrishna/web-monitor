@@ -32,39 +32,93 @@ st.markdown("""
             background-color: #0a0e27;
         }
         
-        /* Metric styling */
+        /* Metric styling - Compact Cards */
         [data-testid="metric-container"] {
-            background-color: #16213e;
-            border: 2px solid #00ff88;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            background: linear-gradient(135deg, #16213e 0%, #1a2851 100%);
+            border: 1.5px solid #00ff88;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.25), inset 0 0 10px rgba(0, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        [data-testid="metric-container"]:hover {
+            border-color: #00ffff;
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4), inset 0 0 10px rgba(0, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
         
         [data-testid="metric-value"] {
             color: #00ffff;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 900 !important;
+            letter-spacing: 1px;
         }
         
         [data-testid="metric-label"] {
             color: #00ff88;
             font-weight: 600 !important;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         /* Headers */
-        h1, h2, h3 {
+        h1 {
             color: #00ff88 !important;
-            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+            font-size: 2.5em;
+            margin-bottom: 5px;
         }
         
-        /* Tabs */
+        h2, h3 {
+            color: #00ff88 !important;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+            margin-top: 0;
+        }
+        
+        /* Tab styling - Enhanced */
         [data-baseweb="tab-list"] {
-            border-bottom: 2px solid #00ff88;
+            background-color: #16213e;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            gap: 5px;
+        }
+        
+        [data-baseweb="tab"] {
+            background-color: #1a2851;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 8px;
+            color: #a0a0ff !important;
+            font-weight: 600 !important;
+            padding: 12px 20px !important;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        [data-baseweb="tab"]:hover {
+            background-color: #16213e;
+            border-color: #00ffff;
+            color: #00ffff !important;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
         }
         
         [aria-selected="true"] {
-            color: #00ff88 !important;
+            background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%) !important;
+            color: #0a0e27 !important;
+            border-color: #00ff88 !important;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+            font-weight: 700 !important;
+        }
+        
+        /* Tab content - Nice background */
+        [data-baseweb="tab-panel"] {
+            background-color: #16213e;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            padding: 20px;
         }
         
         /* Buttons */
@@ -74,22 +128,47 @@ st.markdown("""
             font-weight: 700 !important;
             border: none !important;
             border-radius: 8px !important;
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+            padding: 10px 20px !important;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+            transition: all 0.3s ease;
         }
         
         .stButton > button:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+            transform: translateY(-2px);
         }
         
-        /* Alerts */
+        .stButton > button:active {
+            transform: translateY(0);
+        }
+        
+        /* Alerts & Containers */
         .stAlert {
             background-color: #16213e;
             border-left: 4px solid #00ff88;
+            border-radius: 8px;
+            color: #e0e0ff;
+        }
+        
+        /* Divider */
+        hr {
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            margin: 20px 0;
         }
         
         /* Text color */
         [data-testid="stMarkdownContainer"] {
             color: #e0e0ff;
+        }
+        
+        /* Caption styling */
+        .stCaption {
+            color: #a0a0ff;
+        }
+        
+        /* Container background */
+        [data-testid="stContainer"] {
+            background-color: transparent;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -204,33 +283,34 @@ else:
     except:
         last_check = "Just now"
     
-    # KPI Row - Professional Cards
-    col1, col2, col3, col4 = st.columns(4, gap="medium")
+    # Compact KPI Cards
+    col1, col2, col3, col4 = st.columns(4, gap="small")
     
     with col1:
-        st.metric("📊 Total URLs", f"{total_urls:,}", "checked")
+        st.metric("📊 Total URLs", f"{total_urls:,}", "links")
     
     with col2:
-        st.metric("🔴 Broken Links", broken_count, 
+        st.metric("❌ Broken", broken_count, 
                  f"{(broken_count/total_urls*100 if total_urls > 0 else 0):.1f}%")
     
     with col3:
-        st.metric("✅ Success Rate", f"{success_rate:.1f}%", 
-                 "↑ Excellent" if success_rate > 90 else "⚠ Check needed")
+        st.metric("✅ Success", f"{success_rate:.0f}%", 
+                 "Excellent" if success_rate > 90 else "Need Check")
     
     with col4:
-        st.metric("⏱️ Timeouts", timeout_count, "requests")
+        st.metric("⏱️ Timeouts", timeout_count, "reqs")
     
     st.divider()
     
-    # Info Box
-    col1, col2, col3 = st.columns(3)
+    # Quick Status Info - Compact
+    col1, col2, col3 = st.columns(3, gap="small")
     with col1:
         st.success(f"✅ Last Check: {last_check}")
     with col2:
-        st.info(f"🌐 Base URL: {base_url}")
+        st.info(f"🌐 {base_url.replace('https://', '').split('/')[0]}")
     with col3:
-        st.caption(f"📈 Response: Healthy" if success_rate > 80 else "⚠️ Needs Attention")
+        status = "✨ Healthy" if success_rate > 80 else "⚠️ Issues"
+        st.warning(f"Status: {status}")
     
     st.divider()
     
