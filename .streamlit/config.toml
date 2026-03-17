@@ -5,7 +5,17 @@ level = "info"
 showErrorDetails = true
 
 [theme]
-primaryColor = "#1f77b4"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f0f2f6"
-textColor = "#262730"
+primaryColor = "#00ff88"
+backgroundColor = "#0a0e27"
+secondaryBackgroundColor = "#16213e"
+textColor = "#e0e0ff"
+font = "sans serif"
+
+[fonts]
+sans_serif_font = ["Helvetica", "Arial", "sans-serif"]
+
+[ui]
+theme = "dark"
+
+[plotly]
+theme = "plotly_dark"
