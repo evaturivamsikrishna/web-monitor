@@ -1,0 +1,613 @@
+
+[     UTC     ] Logs for websitemonitor.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[09:37:51] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[09:37:51] 🐙 Cloning repository...
+[09:37:51] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[09:37:51] 🐙 Cloned repository!
+[09:37:51] 🐙 Pulling code changes from Github...
+[09:37:52] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 55 packages in 658ms
+  × Failed to download and build `pillow==9.5.0`
+  ╰─▶ Build backend failed to determine requirements with `build_wheel()`
+      (exit status: 1)
+
+      [stderr]
+      Traceback (most recent call last):
+        File "<string>", line 14, in <module>
+          requires = get_requires_for_build({})
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpBFgFUE/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpBFgFUE/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpBFgFUE/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpBFgFUE/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 29, in <module>
+        File "<string>", line 26, in get_version
+      KeyError: '__version__'
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 41ms
+Prepared 1 package in 44ms
+Installed 4 packages in 13ms
+ + markdown-it-py==4.0.0
+ +[2026-03-17 09:37:58.495077]  mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 105.3 MB/s eta 0:00:00[2026-03-17 09:38:00.783752] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 208.8 MB/s eta 0:00:00[2026-03-17 09:38:04.287292] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[10:23:31] ❗️ installer returned a non-zero exit code
+[10:23:31] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[10:23:31] 🐙 Pulling code changes from Github...
+[10:23:32] 📦 Processing dependencies...
+[10:56:27] 🖥 Provisioning machine...
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+[10:56:32] 🎛 Preparing system...
+[10:56:32] ⛓ Spinning up manager process...
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[11:42:39] ❗️ installer returned a non-zero exit code
+[11:42:39] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[11:42:39] 🐙 Pulling code changes from Github...
+[11:42:40] 📦 Processing dependencies...
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[11:42:39] ❗️ installer returned a non-zero exit code
+[11:42:39] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[11:42:39] 🐙 Pulling code changes from Github...
+[11:42:40] 📦 Processing dependencies...
+[12:28:28] ❗️ installer returned a non-zero exit code
+[12:28:28] 🐙 Pulling code changes from Github...
+[12:28:28] 📦 Processing dependencies...
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[11:42:39] ❗️ installer returned a non-zero exit code
+[11:42:39] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[11:42:39] 🐙 Pulling code changes from Github...
+[11:42:40] 📦 Processing dependencies...
+[12:28:28] ❗️ installer returned a non-zero exit code
+[12:28:28] 🐙 Pulling code changes from Github...
+[12:28:28] 📦 Processing dependencies...
+[13:14:30] ❗️ installer returned a non-zero exit code
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[11:42:39] ❗️ installer returned a non-zero exit code
+[11:42:39] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[11:42:39] 🐙 Pulling code changes from Github...
+[11:42:40] 📦 Processing dependencies...
+[12:28:28] ❗️ installer returned a non-zero exit code
+[12:28:28] 🐙 Pulling code changes from Github...
+[12:28:28] 📦 Processing dependencies...
+[13:14:30] ❗️ installer returned a non-zero exit code
+[10:56:29] 🚀 Starting up repository: 'web-monitor', branch: 'main', main module: 'streamlit_app.py'
+[10:56:29] 🐙 Cloning repository...
+[10:56:30] 🐙 Cloning into '/mount/src/web-monitor'...
+
+[10:56:30] 🐙 Cloned repository!
+[10:56:30] 🐙 Pulling code changes from Github...
+[10:56:30] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.31.0 depends on pillow>=7.1.0,<11 and you require
+      streamlit==1.31.0, we can conclude that you require pillow>=7.1.0,<11.
+      And because you require pillow>=11.0.0, we can conclude that your
+      requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.3 environment at /home/adminuser/venv
+Resolved 4 packages in 1.18s
+Prepared 4 packages in 161ms
+Installed 4 packages in 105ms
+ + markdown-it-py==4.0.0
+ [2026-03-17 10:56:33.662927] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.3
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting aiohttp==3.9.1 (from -r /mount/src/web-monitor/requirements.txt (line 1))
+  Downloading aiohttp-3.9.1.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 53.6 MB/s eta 0:00:00[2026-03-17 10:56:35.372236] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4==4.12.2 (from -r /mount/src/web-monitor/requirements.txt (line 2))
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting requests==2.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 3))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting streamlit==1.31.0 (from -r /mount/src/web-monitor/requirements.txt (line 4))
+  Downloading streamlit-1.31.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting pandas==2.2.3 (from -r /mount/src/web-monitor/requirements.txt (line 5))
+  Downloading pandas-2.2.3.tar.gz (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 255.0 MB/s eta 0:00:00[2026-03-17 10:56:38.609755] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+[11:42:39] ❗️ installer returned a non-zero exit code
+[11:42:39] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[11:42:39] 🐙 Pulling code changes from Github...
+[11:42:40] 📦 Processing dependencies...
+[12:28:28] ❗️ installer returned a non-zero exit code
+[12:28:28] 🐙 Pulling code changes from Github...
+[12:28:28] 📦 Processing dependencies...
+[13:14:30] ❗️ installer returned a non-zero exit code

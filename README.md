@@ -76,7 +76,7 @@ Dashboard opens at: `http://localhost:8501`
 | **AWS EC2** | $10-50/month | 1 hour | Full control, custom needs |
 | **Kubernetes** | $50+/month | 2+ hours | Enterprise, high scale |
 
-**[⬇️ Full Deployment Guide →](DEPLOYMENT.md)**
+**[⬇️ Full Deployment Guide →](docs/DEPLOYMENT.md)**
 
 ### Deploy to Streamlit Cloud (Recommended for Phase 1)
 
@@ -94,11 +94,15 @@ git push origin main
 
 ## 📚 Documentation
 
+Start here for comprehensive guides organized by role and use case:
+
+**[📖 View All Documentation →](docs/INDEX.md)**
+
 | Document | Purpose | Audience |
 |----------|---------|----------|
-| [PRODUCT_SPEC.md](PRODUCT_SPEC.md) | Vision, features, roadmap, use cases | PMs, investors, team alignment |
-| [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md) | Technical architecture, databases, APIs | Engineers, architects, DevOps |
-| [DEPLOYMENT.md](DEPLOYMENT.md) | Deployment guides, operations, troubleshooting | DevOps, SREs, infrastructure |
+| [PRODUCT_SPEC.md](docs/PRODUCT_SPEC.md) | Vision, features, roadmap, use cases | PMs, investors, team alignment |
+| [SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md) | Technical architecture, databases, APIs | Engineers, architects, DevOps |
+| [DEPLOYMENT.md](docs/DEPLOYMENT.md) | Deployment guides, operations, troubleshooting | DevOps, SREs, infrastructure |
 
 ---
 
@@ -126,7 +130,7 @@ git push origin main
 └──────────────────────────────────────────┘
 ```
 
-**[Full System Architecture →](SYSTEM_DESIGN.md)**
+**[Full System Architecture →](docs/SYSTEM_DESIGN.md)**
 
 ---
 

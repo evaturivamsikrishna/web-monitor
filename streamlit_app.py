@@ -905,7 +905,7 @@ Timeout: {selected_site.get('timeout', 10)}s""", language="text")
             
             st.divider()
             st.markdown("### 🚀 Automation")
-            st.info("💡 **Pro Tip**: Set up GitHub Actions to automatically generate and email HTML reports on a scheduled basis. Check DEPLOYMENT.md for details on configuring email alerts.")
+            st.info("💡 **Pro Tip**: Set up GitHub Actions to automatically generate and email HTML reports on a scheduled basis. Check `docs/DEPLOYMENT.md` for details on configuring email alerts.")
 
 st.divider()
 
