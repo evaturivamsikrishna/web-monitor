@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 from pathlib import Path
 from datetime import datetime
 
+# Configure page FIRST
 st.set_page_config(
     page_title="🔗 Web Monitor",
     layout="wide",
@@ -13,116 +14,84 @@ st.set_page_config(
     menu_items={"About": "Professional Link Checker Dashboard"}
 )
 
-# Custom CSS for dark theme with neon colors
+# Inject CSS IMMEDIATELY after page config
 st.markdown("""
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        background-color: #0a0e27;
-        color: #e0e0ff;
-    }
-    
-    .main {
-        background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
-    }
-    
-    /* Header Styling */
-    .header-container {
-        background: linear-gradient(90deg, #00ff88 0%, #00ffff 50%, #ff00ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-weight: 900;
-        margin-bottom: 10px;
-    }
-    
-    /* Metric Cards */
-    [data-testid="metric-container"] {
-        background-color: #16213e;
-        border: 2px solid #00ff88;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-    }
-    
-    [data-testid="metric-container"] [data-testid="metric-value"] {
-        color: #00ffff;
-        font-size: 2.5em;
-        font-weight: 900;
-    }
-    
-    [data-testid="metric-container"] [data-testid="metric-label"] {
-        color: #00ff88;
-        font-weight: 600;
-    }
-    
-    /* Tabs */
-    [data-baseweb="tab-list"] {
-        background-color: #16213e !important;
-        border-bottom: 2px solid #00ff88;
-    }
-    
-    [data-baseweb="tab"] {
-        color: #e0e0ff !important;
-        font-weight: 600;
-    }
-    
-    [aria-selected="true"] {
-        color: #00ff88 !important;
-        border-bottom: 3px solid #00ff88 !important;
-    }
-    
-    /* Data Frame */
-    [data-testid="dataframe"] {
-        background-color: #16213e !important;
-    }
-    
-    /* Subheader */
-    h2, h3 {
-        color: #00ff88;
-        text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-    }
-    
-    /* Buttons */
-    .stButton > button {
-        background: linear-gradient(90deg, #00ff88 0%, #00ffff 100%);
-        color: #0a0e27;
-        font-weight: 700;
-        border: none;
-        border-radius: 8px;
-        padding: 12px 24px;
-        box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
-        transition: all 0.3s ease;
-    }
-    
-    .stButton > button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
-    }
-    
-    /* Info/Warning/Success Boxes */
-    .stAlert {
-        background-color: #16213e;
-        border-left: 4px solid #00ff88;
-        color: #e0e0ff;
-    }
-    
-    /* Divider */
-    hr {
-        border: 1px solid rgba(0, 255, 136, 0.3);
-    }
-    
-    /* Download Button */
-    [data-testid="downloadButton"] {
-        background: linear-gradient(90deg, #ff00ff 0%, #00ffff 100%);
-        color: white;
-        font-weight: 700;
-    }
-</style>
+    <style>
+        /* Main background */
+        .stApp {
+            background-color: #0a0e27;
+        }
+        
+        body {
+            background-color: #0a0e27;
+            color: #e0e0ff;
+        }
+        
+        /* Hide default streamlit theming to use our own */
+        [data-testid="stAppViewContainer"] {
+            background-color: #0a0e27;
+        }
+        
+        /* Metric styling */
+        [data-testid="metric-container"] {
+            background-color: #16213e;
+            border: 2px solid #00ff88;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+        
+        [data-testid="metric-value"] {
+            color: #00ffff;
+            font-size: 2em;
+            font-weight: 900 !important;
+        }
+        
+        [data-testid="metric-label"] {
+            color: #00ff88;
+            font-weight: 600 !important;
+        }
+        
+        /* Headers */
+        h1, h2, h3 {
+            color: #00ff88 !important;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+        
+        /* Tabs */
+        [data-baseweb="tab-list"] {
+            border-bottom: 2px solid #00ff88;
+        }
+        
+        [aria-selected="true"] {
+            color: #00ff88 !important;
+        }
+        
+        /* Buttons */
+        .stButton > button {
+            background: linear-gradient(90deg, #00ff88 0%, #00ffff 100%) !important;
+            color: #0a0e27 !important;
+            font-weight: 700 !important;
+            border: none !important;
+            border-radius: 8px !important;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+        }
+        
+        .stButton > button:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+        }
+        
+        /* Alerts */
+        .stAlert {
+            background-color: #16213e;
+            border-left: 4px solid #00ff88;
+        }
+        
+        /* Text color */
+        [data-testid="stMarkdownContainer"] {
+            color: #e0e0ff;
+        }
+    </style>
 """, unsafe_allow_html=True)
 
 @st.cache_data(ttl=300)
@@ -193,7 +162,7 @@ def create_gauge_chart(value, title, color):
 # Header
 col1, col2 = st.columns([3, 1])
 with col1:
-    st.markdown('<h1 class="header-container">🔗 Web Monitor</h1>', unsafe_allow_html=True)
+    st.markdown("# 🔗 Web Monitor")
     st.caption("⚡ Professional Link Checker with Real-Time Analysis")
 
 results = load_results()
