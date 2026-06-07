@@ -1,11 +1,1 @@
-[
-  {
-    "url": "https://github.com/rochacbruno/flasgger",
-    "status": "BROKEN",
-    "code": 504,
-    "response_time_ms": 9628.91,
-    "error_type": "Server Error (504)",
-    "site_id": "primary",
-    "site_name": "Primary Site"
-  }
-]
+[]
