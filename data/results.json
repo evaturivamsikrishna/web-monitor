@@ -1,40 +1,40 @@
 {
-  "timestamp": "2026-07-04T13:44:46.003452",
+  "timestamp": "2026-07-04T19:21:37.852653",
   "sites": [
     {
       "site_id": "primary",
       "site_name": "Primary Site",
       "base_url": "https://httpbin.org/",
-      "last_check": "2026-07-04T13:44:46.003210",
+      "last_check": "2026-07-04T19:21:37.852481",
       "total_urls": 3,
       "broken_count": 0,
       "timeout_count": 0,
       "error_count": 0,
       "success_rate": 100.0,
-      "avg_response_time_ms": 559.87,
-      "p50_response_time_ms": 645.83,
-      "p95_response_time_ms": 652.42,
-      "p99_response_time_ms": 652.42,
+      "avg_response_time_ms": 350.17,
+      "p50_response_time_ms": 421.75,
+      "p95_response_time_ms": 466.9,
+      "p99_response_time_ms": 466.9,
       "results": [
+        {
+          "url": "https://github.com/requests/httpbin",
+          "status": "OK",
+          "code": 200,
+          "response_time_ms": 421.75,
+          "error_type": null
+        },
         {
           "url": "https://github.com/rochacbruno/flasgger",
           "status": "OK",
           "code": 200,
-          "response_time_ms": 652.42,
+          "response_time_ms": 466.9,
           "error_type": null
         },
         {
           "url": "https://kennethreitz.org",
           "status": "OK",
           "code": 200,
-          "response_time_ms": 381.36,
-          "error_type": null
-        },
-        {
-          "url": "https://github.com/requests/httpbin",
-          "status": "OK",
-          "code": 200,
-          "response_time_ms": 645.83,
+          "response_time_ms": 161.86,
           "error_type": null
         }
       ]
