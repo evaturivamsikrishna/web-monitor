@@ -1,28 +1,21 @@
 {
-  "timestamp": "2026-10-24T10:38:33.945855",
+  "timestamp": "2026-10-24T15:40:38.795346",
   "sites": [
     {
       "site_id": "primary",
       "site_name": "Primary Site",
       "base_url": "https://httpbin.org/",
-      "last_check": "2026-10-24T10:38:33.945703",
+      "last_check": "2026-10-24T15:40:38.795195",
       "total_urls": 3,
       "broken_count": 0,
       "timeout_count": 0,
       "error_count": 2,
       "success_rate": 33.33,
-      "avg_response_time_ms": 414.76,
-      "p50_response_time_ms": 414.76,
-      "p95_response_time_ms": 414.76,
-      "p99_response_time_ms": 414.76,
+      "avg_response_time_ms": 413.78,
+      "p50_response_time_ms": 413.78,
+      "p95_response_time_ms": 413.78,
+      "p99_response_time_ms": 413.78,
       "results": [
-        {
-          "url": "https://kennethreitz.org",
-          "status": "OK",
-          "code": 200,
-          "response_time_ms": 414.76,
-          "error_type": null
-        },
         {
           "url": "https://github.com/requests/httpbin",
           "status": "ERROR",
@@ -36,6 +29,13 @@
           "code": null,
           "response_time_ms": 0,
           "error_type": "Connection Error"
+        },
+        {
+          "url": "https://kennethreitz.org",
+          "status": "OK",
+          "code": 200,
+          "response_time_ms": 413.78,
+          "error_type": null
         }
       ]
     }
