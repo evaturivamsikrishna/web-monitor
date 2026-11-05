@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-05T14:29:39.539725",
+  "timestamp": "2026-11-05T23:28:41.537149",
   "sites": [
     {
       "site_id": "primary",
       "site_name": "Primary Site",
       "base_url": "https://httpbin.org/",
-      "last_check": "2026-11-05T14:29:39.539580",
+      "last_check": "2026-11-05T23:28:41.537031",
       "total_urls": 0,
       "broken_count": 0,
       "timeout_count": 0,
